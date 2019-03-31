@@ -5,7 +5,7 @@ class Hash
   def keys_of(*arguments)
     array = []
     #use self since each closes the scope. 
-    arguments.collect do |key, value|
+    self.each do |key, value|
       if arguments.include?(value)
         array << key 
       end
