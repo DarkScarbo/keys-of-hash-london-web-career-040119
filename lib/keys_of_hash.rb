@@ -6,8 +6,10 @@ class Hash
     array = []
     #use self since each closes the scope. 
     self.each do |key, value|
-      if arguments.include?(value)
-        array << key 
+#      if arguments.include?(value)
+#        array << key 
+        if value == arguments
+          array.push(key)
       end
     end
     array
