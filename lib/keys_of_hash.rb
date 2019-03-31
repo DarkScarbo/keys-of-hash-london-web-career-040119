@@ -1,11 +1,11 @@
 class Hash
 #  def keys_of(*arguments)
-#    self.collect {|k, e| k if arguments.include?(e)}.keep_if {|e| e}
+#    self.collect {|k, v| k if arguments.include?(v)}.keep_if {|v| v}
 #  end
   def keys_of(*arguments)
     array = []
     #use self since each closes the scope. 
-    self.each do |key, value|
+    arguments.collect do |key, value|
       if arguments.include?(value)
         array << key 
       end
