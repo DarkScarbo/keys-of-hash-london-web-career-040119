@@ -12,5 +12,5 @@ class Hash
     end
     array
   end
-end```
+end
 
